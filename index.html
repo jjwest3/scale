@@ -69,8 +69,8 @@
   .panel.flag {
     border-left: 3px solid var(--accent);
   }
-  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 18px 0; }
-  @media (max-width: 600px) { .row { grid-template-columns: 1fr; } }
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 18px 0; }
+  @media (max-width: 720px) { .row { grid-template-columns: 1fr; } }
   .card {
     background: var(--panel);
     border: 1px solid var(--line);
@@ -147,7 +147,7 @@
   </p>
 
   <h2>What's actually shipping today</h2>
-  <p>This isn't a deck. It's a production-grade platform I built solo in under four months using AI-assisted tooling (Cursor, Claude Code, Windsurf) — me driving science, product, and operator conversations; the LLMs handling implementation under tight review.</p>
+  <p>I'm a physics undergrad, not traditionally a software engineer. I leaned hard on AI-assisted coding tools (Cursor, Claude Code, Windsurf) and built a production-grade platform solo in under four months — me driving the science, the product surface, and the operator conversations; the LLMs handling implementation under tight review. This isn't a deck.</p>
   <ul>
     <li><strong>324-cell global risk grid</strong> (10°lat × 20°lon), updated every 5 minutes from NOAA SWPC, GloTEC TEC, NASA OMNI HAPI, and GFZ Potsdam.</li>
     <li><strong>Physics-to-operational translation:</strong> GPS error in meters, HF reliability in dB (ITU-R P.533), L-band SATCOM fade margin — not raw Kp.</li>
@@ -161,7 +161,11 @@
   <div class="row">
     <div class="card">
       <h3>WarHacker · June 2026</h3>
-      <p class="stat-line">Personally invited by <strong>Andrew Greene, CEO of Defense Unicorns</strong>. Only undergrad in the 400-person cohort. Demoing to senior DoW operators in San Diego.</p>
+      <p class="stat-line">Personally invited by <strong>Andrew Greene, CEO of Defense Unicorns</strong>. Only undergrad in the 400-person cohort. Demoing to senior DoW operators in San Diego. <strong>Currently raising for IonShield and seeking travel support to attend.</strong></p>
+    </div>
+    <div class="card">
+      <h3>Founder's Institute · Fall 2026</h3>
+      <p class="stat-line">Personally invited by <strong>Daniel Shires</strong>, Director of the Founder's Institute Defense and National Security Accelerator, to apply on fellowship — no cost.</p>
     </div>
     <div class="card">
       <h3>DRF + Government</h3>
@@ -172,25 +176,13 @@
   <h2>Why this is the right team</h2>
   <p>Scale's stated mission is reliable AI for the world's most important decisions, and the hackathon job page calls out Army and Air Force partnerships specifically. IonShield's whole design thesis — auditable models, physics-grounded outputs, defense-delivery-layer-first — is the same thesis. The DoW spent 20 years and several prototypes trying to build the operator-facing layer between scientific indices and tactical decisions. The conditions to actually ship it (ATAK ubiquity, Foundry marketplace, modern airgapped delivery via Platform One/UDS) only converged in the last 18 months. That's the work I want to be doing for the next decade, and Scale is the largest team in the world doing a version of it.</p>
 
-  <h2>The rest of the track record</h2>
-  <ul>
-    <li><strong>CougSAT</strong> — team lead on a CubeSat mission investigating space-weather-driven GNSS degradation. The IonShield science problem, on hardware.</li>
-    <li><strong>USIP Program Director</strong> — leading a 30+ (now 60-) person interdisciplinary team on high-altitude and spaceflight instrumentation. PDR/CDR cadence across avionics, systems, science, ops.</li>
-    <li><strong>Texas Center for Superconductivity</strong> — undergrad researcher on CeGeOx and FeSe; diamond-anvil-cell high-pressure measurements, Raman/ruby fluorescence, Python/LabVIEW analysis.</li>
-    <li><strong>LabLink AI</strong> — founder. Full-stack research-onboarding platform; pitched WCE; 1st place Summer VibeCoding Hackathon.</li>
-    <li><strong>Perplexity Campus Strategist</strong> — UH adoption lead.</li>
-    <li>BS Physics + minor in National Security Studies, U of Houston. NSF SaMMs, Houston Scholar, Honors Distinguished Scholar, Sigma Pi Sigma.</li>
-  </ul>
-
   <h2>What I'm actually asking for</h2>
   <p>The same look any hackathon attendee would get — read the page, click into the MVP, decide whether the work is interesting, and if it is, let's talk. If it isn't, no harm done.</p>
 
   <hr />
 
-  <p class="meta">Thanks for reading. — Jacobe</p>
-
   <div class="footer">
-    Built in a few prompts with Claude.
+    Thanks for reading. — Jacobe · Built in a few prompts with Claude.
   </div>
 
 </div>
