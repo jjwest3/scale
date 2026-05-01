@@ -138,39 +138,53 @@
   </div>
 
   <h2>What I'm building</h2>
-  <p><strong>IonShield</strong> — a "Google Maps for space weather." Real-time situational awareness for defense and satellite operators: where the ionosphere is degrading GNSS signals right now, where energetic particle activity is about to disrupt SATCOM, and what that means for assets on station.</p>
-  <p>I'm building the MVP solo, with AI-assisted tooling (Cursor, Claude Code, Windsurf) doing the bulk of the implementation while I drive the science model, the product surface, and the operator conversations.</p>
+  <p><strong>IonShield</strong> — operational space weather intelligence. The translation layer between raw NOAA/GloTEC/NASA data and the decision a dispatcher, SOF team, or satellite operator has to make in the next 90 seconds. "Will my GPS be reliable on this grid tonight? Which HF frequencies will work on this route? Should I delay this mission three hours?"</p>
+  <p>Solar Cycle 25 is at maximum right now — the May 2024 G5 was the strongest storm in 20 years and ran 40% above predictions. The DoW publishes 35,000+ space weather products a day. Zero of them are unclassified, ATAK-native, or self-service at the tactical edge. That's the gap.</p>
 
   <p>
-    <a class="cta" href="https://ionshield-demo-mvp.onrender.com" target="_blank" rel="noopener">View the IonShield MVP →</a>
+    <a class="cta" href="https://ionshield-demo-mvp.onrender.com" target="_blank" rel="noopener">View the live MVP →</a>
     <a class="cta ghost" href="https://linkedin.com/in/jacobewest" target="_blank" rel="noopener">LinkedIn</a>
   </p>
 
+  <h2>What's actually shipping today</h2>
+  <p>This isn't a deck. It's a production-grade platform I built solo in under four months using AI-assisted tooling (Cursor, Claude Code, Windsurf) — me driving science, product, and operator conversations; the LLMs handling implementation under tight review.</p>
+  <ul>
+    <li><strong>324-cell global risk grid</strong> (10°lat × 20°lon), updated every 5 minutes from NOAA SWPC, GloTEC TEC, NASA OMNI HAPI, and GFZ Potsdam.</li>
+    <li><strong>Physics-to-operational translation:</strong> GPS error in meters, HF reliability in dB (ITU-R P.533), L-band SATCOM fade margin — not raw Kp.</li>
+    <li><strong>Live ATAK integration:</strong> KML network link, GeoJSON overlay, CoT pull feed (MIL-STD-2525B), async CoT push to TAK Server on port 8087. Zero competing ionospheric overlays exist in the 250K-device ATAK installed base.</li>
+    <li><strong>Self-retraining ML pipeline</strong> with champion/challenger A/B, drift-triggered retraining, and <em>human-readable JSON model weights</em> — designed deliberately for DoD reviewer audit. Black-box ML doesn't get a FedRAMP ATO.</li>
+    <li><strong>Palantir Foundry integration</strong> live: 4 datasets syncing every 5 minutes, ontology objects defined, Workshop-ready.</li>
+    <li><strong>Three concurrent API versions, 413 tests passing</strong>, async SQLAlchemy, structured migrations, Render + Foundry dual deployment.</li>
+    <li><strong>8 historical storm replays</strong> (May 2024 G5, Halloween 2003, St. Patrick's 2015) with hour-by-hour scrubber and KMZ/CSV export.</li>
+  </ul>
+
   <div class="row">
     <div class="card">
-      <h3>WarHacker 2026</h3>
-      <p class="stat-line">Selected by Defense Unicorns to pitch and demo to DoW operators. <strong>Only undergrad invited out of 400+.</strong></p>
+      <h3>WarHacker · June 2026</h3>
+      <p class="stat-line">Personally invited by <strong>Andrew Greene, CEO of Defense Unicorns</strong>. Only undergrad in the 400-person cohort. Demoing to senior DoW operators in San Diego.</p>
     </div>
     <div class="card">
-      <h3>Pre-seed</h3>
-      <p class="stat-line">In talks with Dorm Room Fund pending an operator pilot. Looking for a <strong>technical co-founder</strong> to scale the software.</p>
+      <h3>DRF + Government</h3>
+      <p class="stat-line">Pre-seed conversation with Dorm Room Fund pending pilot. White paper submitted to DoW Golden Dome CSO. SAM.gov registered.</p>
     </div>
   </div>
 
-  <h2>Why I think I'd be useful to your team</h2>
-  <p>I'm a physics undergrad at the University of Houston with a minor in National Security Studies. The relevant track record:</p>
+  <h2>Why this is the right team</h2>
+  <p>Scale's stated mission is reliable AI for the world's most important decisions, and the hackathon job page calls out Army and Air Force partnerships specifically. IonShield's whole design thesis — auditable models, physics-grounded outputs, defense-delivery-layer-first — is the same thesis. The DoW spent 20 years and several prototypes trying to build the operator-facing layer between scientific indices and tactical decisions. The conditions to actually ship it (ATAK ubiquity, Foundry marketplace, modern airgapped delivery via Platform One/UDS) only converged in the last 18 months. That's the work I want to be doing for the next decade, and Scale is the largest team in the world doing a version of it.</p>
+
+  <h2>The rest of the track record</h2>
   <ul>
-    <li><strong>IonShield</strong> — founder. Defense/SATCOM space weather product, AI-coded MVP, WarHacker selection, DRF in conversation.</li>
-    <li><strong>CougSAT</strong> — team lead on a CubeSat mission studying space-weather-driven GNSS degradation. The science problem behind IonShield, on hardware.</li>
-    <li><strong>USIP Program Director</strong> — leading a 30+ person interdisciplinary team building high-altitude and spaceflight instrumentation. PDR/CDR cadence across avionics, systems, science, ops.</li>
+    <li><strong>CougSAT</strong> — team lead on a CubeSat mission investigating space-weather-driven GNSS degradation. The IonShield science problem, on hardware.</li>
+    <li><strong>USIP Program Director</strong> — leading a 30+ (now 60-) person interdisciplinary team on high-altitude and spaceflight instrumentation. PDR/CDR cadence across avionics, systems, science, ops.</li>
     <li><strong>Texas Center for Superconductivity</strong> — undergrad researcher on CeGeOx and FeSe; diamond-anvil-cell high-pressure measurements, Raman/ruby fluorescence, Python/LabVIEW analysis.</li>
-    <li><strong>LabLink AI</strong> — founder. Full-stack platform for research onboarding; pitched WCE; 1st place at Summer VibeCoding Hackathon.</li>
+    <li><strong>LabLink AI</strong> — founder. Full-stack research-onboarding platform; pitched WCE; 1st place Summer VibeCoding Hackathon.</li>
     <li><strong>Perplexity Campus Strategist</strong> — UH adoption lead.</li>
+    <li>BS Physics + minor in National Security Studies, U of Houston. NSF SaMMs, Houston Scholar, Honors Distinguished Scholar, Sigma Pi Sigma.</li>
   </ul>
 
   <h2>What I'm actually asking for</h2>
-  <p>I'm not asking to skip a step. I'm asking for the same look any hackathon attendee would get — read the page, decide whether the work is interesting, and if it is, let's talk. If it isn't, no harm done; the form is the form for a reason.</p>
-  <p>If the timing isn't right for a hire, I'd still take a 20-minute call with anyone on the National Security side who works on space-domain awareness or GNSS-adjacent problems. I'd learn a lot from it, and I might have a useful operator anecdote in return.</p>
+  <p>The same look any hackathon attendee would get — read the page, click into the MVP, decide whether the work is interesting, and if it is, let's talk. If it isn't, no harm done.</p>
+  <p>If a hire isn't the right fit right now, I'd still take a 20-minute call with anyone on the National Security side who works on space-domain awareness, GNSS, or auditable-ML-for-DoD problems. I'd learn a lot, and I'd come with operator anecdotes from WarHacker on the way back.</p>
 
   <hr />
 
